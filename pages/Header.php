@@ -35,12 +35,12 @@
   </div>
   <!-- sidebar -->
 <div class="sidebar">
-  <a href="welcome.php"><i class="fas fa-home"></i> Home</a>
-  <a href="report.php"><i class="fas fa-chart-bar"></i> Report</a>
-  <a href="form.php"><i class="fab fa-wpforms"></i> Forms</a>
+  <a href="../pages/welcome.php"><i class="fas fa-home"></i> Home</a>
+  <a href="../pages/report.php"><i class="fas fa-chart-bar"></i> Report</a>
+  <a href="../pages/form.php"><i class="fab fa-wpforms"></i> Forms</a>
   <a href="../item/Stock.php"><i class="fas fa-archive"></i> Stock</a>
   <a href="../user/user_list.php"><i class="fas fa-user"></i> Users</a>
-  <a href="location.php"><i class="fas fa-map-marker-alt"></i> Location</a>
+  <a href="../pages/location.php"><i class="fas fa-map-marker-alt"></i> Location</a>
   <a href="../item/track.php"><i class="fas fa-truck"></i> Track</a>
 </div>
 </body>
