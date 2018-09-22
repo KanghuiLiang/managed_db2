@@ -2,7 +2,7 @@
 include('loginAction.php'); // Includes Login Script
 
 if(isset($_SESSION['login_user'])){
-header("location: welcome.php");
+header("location: ../pages/welcome.php");
 }
 ?>
 
@@ -25,25 +25,25 @@ header("location: welcome.php");
    <h2>Admin Login</h2>
    <p>Please enter User Name and password</p>
    </div>
-    <form action="" method="post" id="Login" >
+    <form method="post" id="Login" >
 
         <div class="form-group">
 
 
-            <input type="text" class="form-control" id="userID" placeholder="User ID">
+            <input type="text" class="form-control" id="userID" placeholder="User ID" name="userID">
 
         </div>
 
         <div class="form-group">
 
-            <input type="password" class="form-control" id="Password" placeholder="Password">
+            <input type="password" class="form-control" id="Password" placeholder="Password" name="userPassword">
 
         </div>
         <div class="forgot">
         <a href="reset.html">Forgot password?</a>
 </div>
         <button type="submit" class="btn btn-primary">Login</button>
-        <span><?php echo $error; ?></span>
+        <span><?php $fmsg; ?></span>
     </form>
     </div>
 <p class="botto-text">Database2</p>

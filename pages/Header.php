@@ -16,7 +16,7 @@
 <div class="topnav">
   <div class="row">
     <div class="col-md-2">
-	<a href="Welcome.php">DataBase2</a>
+	<a href="../pages/Welcome.php">DataBase2</a>
 </div>
 <div class="col-md-2"></div>
 <div class="col-md-4">
@@ -29,7 +29,7 @@
 </div>
 <div class="col-md-2"></div>
 <div class="col-md-1">
-<a href="../login/login.php">Login</a>
+<a href="../pages/login.php">Login</a>
   </div>
   </div>
   </div>
