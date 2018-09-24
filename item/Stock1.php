@@ -8,14 +8,15 @@
 <head>
   <title>Stock</title>
   <meta charset="utf-8">
-</head<body>
+</head>
+<body>
     <div class="main">
       <div class="row">
       <div class="col-md-9">
   <h2>Stock on Hand</h2>
 </div>
   <div class="col-md-3">
-<h2> <button> <i class="fas fa-plus-square"></i><a href="../item/add_Item.php">Add Item</a></button></h2>
+<h2> <button> <i class="fas fa-plus-square"></i><a href="add_Item.php">Add Item</a></button></h2>
 </div>
   </div>
 <table class="table table-striped">
@@ -40,19 +41,16 @@
         echo '<td>'.$row['price'].'</td>';
         echo '<td>'.$row['size'].'</td>';
         echo "<td><a href='edit_item.php?itemCode=".$row['itemCode']."'><i class='fas fa-pen'></i>Update</a></td>";
-        echo "<td><a href='delete_item.php?itemCode=".$row['itemCode']."' onClick=\"return confirm('Are you sure you want to delete?')\"><i class='fas fa-pen'></i>Delete</a></td>";
-
-
+        echo "<td><a href='delete_item.php?itemCode=".$row['itemCode']."'><i class='fas fa-trash-alt'></i>Delete</a></td>";
         echo '</tr>';
       }
     }
 
     $conn->close();
   ?>
-<!-- <a onclick="return confirm('Are you sure?')"  href="Delete_Vendor.php?ID=$row[ID]"> Delete </a> -->
+
 
 </table>
 
 </body>
-
 </html>

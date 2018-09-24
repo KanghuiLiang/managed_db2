@@ -37,7 +37,7 @@
         echo '<td>'.$row['userID'].'</td>';
         echo '<td>'.$row['userPermission'].'</td>';
         echo "<td><a href='edit_user.php?userID=".$row['userID']."'><i class='fas fa-pen'></i>Update</a></td>";
-        echo "<td><a href='delete_user.php?userID=".$row['userID']."'><i class='fas fa-trash-alt'></i>Delete</a></td>";
+        echo "<td><a href='delete_user.php?userID=".$row['userID']."' onClick=\"return confirm('Are you sure you want to delete?')\"><i class='fas fa-trash-alt'></i>Delete</a></td>";
         echo '</tr>';
       }
 

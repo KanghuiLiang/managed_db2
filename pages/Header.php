@@ -29,7 +29,7 @@
 </div>
 <div class="col-md-2"></div>
 <div class="col-md-1">
-<a href="../pages/login.php">Login</a>
+<a>Admin</a>
   </div>
   </div>
   </div>
