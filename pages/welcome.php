@@ -14,6 +14,7 @@
     <body>
     	<div class="main">
     		<h1>Welcome to Database</h1>
+            <p>Here you can add your items and users</p>
     	</div>
     </body>
     </html>

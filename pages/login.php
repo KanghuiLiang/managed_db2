@@ -1,10 +1,5 @@
-<?php
-include('loginAction.php'); // Includes Login Script
 
-if(isset($_SESSION['login_user'])){
-header("location: ../pages/welcome.php");
-}
-?>
+
 
 <html>
   <head>
@@ -25,30 +20,28 @@ header("location: ../pages/welcome.php");
    <h2>Admin Login</h2>
    <p>Please enter User Name and password</p>
    </div>
-    <form method="post" id="Login" >
+    <form action="loginAction.php" method="post" id="Login" >
 
         <div class="form-group">
 
 
-            <input type="text" class="form-control" id="userID" placeholder="User ID" name="userID">
+            <input type="text" class="form-control" id="userID" placeholder="User ID" name="username">
 
         </div>
 
         <div class="form-group">
 
-            <input type="password" class="form-control" id="Password" placeholder="Password" name="userPassword">
+            <input type="password" class="form-control" id="Password" placeholder="Password" name="password">
 
         </div>
         <div class="forgot">
         <a href="reset.html">Forgot password?</a>
 </div>
         <button type="submit" class="btn btn-primary">Login</button>
-        <span><?php $fmsg; ?></span>
     </form>
     </div>
-<p class="botto-text">Database2</p>
-</div></div></div>
-
+</div>
+</div>
 
 </body>
 </html>

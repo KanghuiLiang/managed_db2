@@ -53,34 +53,52 @@ $result = $conn->query($sql);
 <html>
 <head>    
     <title>Edit Data</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="../CSS/add_item.css">
 </head>
  
 <body>
-    <a href="../pages/index.php">Home</a>
-    <br/><br/>
-    
-    <form name="form1" method="post" action="edit_item.php">
-        <table border="0">
-        	 <tr> 
-                <td>ItemCode</td>
-                <td><input type="text" name="itemCode" value="<?php echo $itemCode;?>" readonly></td>
-            </tr>
-            <tr> 
-                <td>Detail</td>
-                <td><input type="text" name="detail" value="<?php echo $detail;?>"></td>
-            </tr>
-            <tr> 
-                <td>price</td>
-                <td><input type="text" name="price" value="<?php echo $price;?>"></td>
-            </tr>
-            <tr> 
-                <td>Size</td>
-                <td><input type="text" name="size" value="<?php echo $size;?>"></td>
-            </tr>
-            <tr>
-                <td><input type="submit" name="update" value="Update"></td>
-            </tr>
-        </table>
-    </form>
+             <div class="container">
+                        <div class="login-wrap">
+                            <div class="login-content">
+
+                            <form name="form1" method="post" action="edit_item.php">
+                                <table border="0">
+                                    <div class="form-group left">
+                                	 <tr> 
+                                        <td>ItemCode</td>
+                                        <td><input class="form-control" type="text" name="itemCode" value="<?php echo $itemCode;?>" readonly></td>
+                                    </tr>
+                                    </div>
+
+                                    <div class="form-group left">
+                                    <tr> 
+                                        <td>Detail</td>
+                                        <td><input class="form-control" type="text" name="detail" value="<?php echo $detail;?>"></td>
+                                    </tr>
+                                    </div>
+
+                                    <div class="form-group left">
+                                    <tr> 
+                                        <td>price</td>
+                                        <td><input class="form-control" type="text" name="price" value="<?php echo $price;?>"></td>
+                                    </tr>
+                                    </div>
+
+                                    <div class="form-group left">
+                                    <tr> 
+                                        <td>Size</td>
+                                        <td><input class="form-control" type="text" name="size" value="<?php echo $size;?>"></td>
+                                    </tr>
+                                    </div>
+                                    <tr>
+                                        <td> <button type="submit" name="update" value="Update"  class="btn btn-primary">Update</button></td>
+                                       
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                </div>
 </body>
 </html>

@@ -8,8 +8,12 @@
 <head>
   <title>Stock</title>
   <meta charset="utf-8">
-</head<body>
-    <div class="main">
+</head>
+
+<body>
+
+  <section class="position">
+      <div class="main">
       <div class="row">
       <div class="col-md-9">
   <h2>Stock on Hand</h2>
@@ -39,8 +43,8 @@
         echo '<td>'.$row['detail'].'</td>';
         echo '<td>'.$row['price'].'</td>';
         echo '<td>'.$row['size'].'</td>';
-        echo "<td><a href='edit_item.php?itemCode=".$row['itemCode']."'><i class='fas fa-pen'></i>Update</a></td>";
-        echo "<td><a href='delete_item.php?itemCode=".$row['itemCode']."' onClick=\"return confirm('Are you sure you want to delete?')\"><i class='fas fa-pen'></i>Delete</a></td>";
+        echo "<td><a style='color:white' href='edit_item.php?itemCode=".$row['itemCode']."'><button type='button' class='btn btn-success'>Update</a></button></td>";
+        echo "<td><a style='color:white' href='delete_item.php?itemCode=".$row['itemCode']."' onClick=\"return confirm('Are you sure you want to delete?')\"><button type='button' class='btn btn-danger'>Delete</a></button></td>";
 
 
         echo '</tr>';
@@ -52,6 +56,8 @@
 <!-- <a onclick="return confirm('Are you sure?')"  href="Delete_Vendor.php?ID=$row[ID]"> Delete </a> -->
 
 </table>
+</section>
+
 
 </body>
 

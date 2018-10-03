@@ -1,0 +1,132 @@
+body {
+  font-family: 'Open Sans', serif;
+      padding-top: 0;
+    padding-left: 17rem;
+    position: relative;
+
+}
+
+h1,h2 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+
+@media (min-width: 992px) {
+#leftnav {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+    height: 100vh;
+}
+
+  #leftnav .navbar-collapse .navbar-nav {
+    flex-direction: column;
+        width: 100%;
+  }
+
+    #leftnav .navbar-collapse {
+    display: flex;
+    align-items: flex-start;
+    flex-grow: 0;
+    width: 100%;
+    margin-bottom: auto;
+  }
+
+  #leftnav .navbar-collapse .navbar-nav .nav-item {
+    display: block;
+  }
+
+  #leftnav .navbar-collapse .navbar-nav .nav-item a {
+    color: #000000;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 20px;
+  }
+
+   #leftnav .navbar-collapse .navbar-nav .nav-item a:hover {
+    color: #DD835F;
+  }
+
+  #leftnav .navbar-collapse .navbar-nav .nav-item .nav-link.active {
+    color: #FFFFFF;
+  }
+
+ 
+}
+
+img.img-profile{
+    max-width: 15rem;
+    max-height: 15rem;
+    margin-top: 140px;
+    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+  }
+
+
+section.cvsection {
+  border-bottom: 1px solid #dee2e6;
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+}
+
+section.cvsection {
+  min-height: 30vh;
+}
+
+
+.bg{
+  background-color: #BD5D38 !important;
+}
+
+.list-icons {
+  font-size: 60px;
+}
+
+img.award {
+  width: 300px;
+  height: auto;
+}
+
+.text-primary {
+  color: #BD5D38 !important;
+}
+
+a.thumb1 {
+  position:relative;
+ display:block;
+  width:300px;
+  height:50px;
+  }
+
+#popup{
+display: none;
+position: fixed;
+z-index: 1000;
+left:0;
+top:0;
+/* your styles */
+}
+
+
+.google, .ieee, .chairball, .csr, .techslam {
+  display: none;
+}
+
+.btn {
+  background-color: #BD5D38;
+  color: #FFFFFF;
+}
+
+.sectionwidth {
+  margin: auto;
+}
+
+/*#leftnav .navbar-collapse .navbar-nav .nav-item a.active {
+  color: #FFFFFF;
+}*/
+
+.btnhover:hover {
+  background-color: #008CBA;
+}
