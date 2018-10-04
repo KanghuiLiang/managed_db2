@@ -11,7 +11,7 @@ include('../connection.php');
 </head>
 <div class="row">
       <div class="col-md-1"></div>
-      <div class="col-md-7"><h2>Track</h2></div>
+      <div class="col-md-7"><h2>Search result</h2></div>
   <div class="col-md-3">
 <h2> <button><a href="../pages/index.php">Back to Home</a></button></h2>
 </div>
@@ -22,32 +22,34 @@ include('../connection.php');
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>Tracking ID</th>
-        <th>Date Recieve from Customer</th>
-        <th>Date Arrived Company</th>
-        <th>Send toFactory</th>
-        <th>Date Return To Department</th>
-        <th>Send Method</th>
-        <th>Person Sent</th>
+        <th>Repair ID</th>
+        <th>Repair Form ID</th>
+        <th>Department Store</th>
+        <th>Data of Purchase</th>
+        <th>Customer ID</th>
+        <th>Customer Name</th>
+        <th>Phone Number</th>
       </tr>
       </thead>
 <?php
-$id = $_POST['id'];
+$id = $_POST['serachform'];
 
-$sql = "SELECT * FROM tracking WHERE Tracking_ID = '$id'";
+// Cusfrom is a view
+$sql = "SELECT * FROM db2foruml2.CusFrom where (Repair_ID like '%$id%' OR Repair_FormID LIKE '%$id%' OR Dept_Store LIKE '%$id%' OR Date_of_Purchase LIKE '%$id%'
+OR Cus_ID LIKE '%$id%' OR CusName LIKE '%$id%')";
 
 $result = $conn->query($sql);
 
     if($result -> num_rows>0){
       while($row = $result -> fetch_assoc()){
         echo '<tr>';
-        echo '<td>'.$row['Tracking_ID'].'</td>';
-        echo '<td>'.$row['Date_Recieve_fromCustomer'].'</td>';
-        echo '<td>'.$row['Date_Arrived_Comp'].'</td>';
-        echo '<td>'.$row['Sendto_Factory'].'</td>';
-        echo '<td>'.$row['Date_ReturntTo_Dept'].'</td>';
-        echo '<td>'.$row['SendMethod'].'</td>';
-        echo '<td>'.$row['Person_Sent'].'</td>';
+        echo '<td>'.$row['Repair_ID'].'</td>';
+        echo '<td>'.$row['Repair_FormID'].'</td>';
+        echo '<td>'.$row['Dept_Store'].'</td>';
+        echo '<td>'.$row['Date_of_Purchase'].'</td>';
+        echo '<td>'.$row['Cus_ID'].'</td>';
+        echo '<td>'.$row['CusName'].'</td>';
+        echo '<td>'.$row['CusPnum'].'</td>';
         echo '</tr>';
       }
 

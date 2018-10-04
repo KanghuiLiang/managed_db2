@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="database.png" type="image/png" sizes = "16x16"/>
 <link rel="stylesheet" href="../CSS/Header.css">
 <link rel="stylesheet" type="text/css" href="../CSS/css/bootstrap.css">
@@ -67,7 +69,7 @@
               </div>
               <nav class="main_nav_contaner">
                 <ul class="main_nav">
-                  <li class="active"><a href="../pages/welcome.php">Home</a></li>
+                  <li><a href="../pages/welcome.php">Dash</a></li>
                   <li><a href="../pages/report.php">Report</a></li>
                   <li><a href="../pages/receipt.php">Forms</a></li>
                   <li><a href="../item/Stock.php">Stock</a></li>

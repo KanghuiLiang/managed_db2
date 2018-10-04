@@ -14,6 +14,16 @@
 
   <section class="position">
       <div class="main">
+         <div class="row">
+                <div class="col-md-7"></div>
+                <div class="col-md-5">
+            <div class="form">
+            <form action="get_searchItem.php" method="post">
+             Search: <input type="id" name="serachItem">
+            <button><i class="fas fa-search"></i></button>
+            </form>
+      </div>
+            </div>
       <div class="row">
       <div class="col-md-9">
   <h2>Stock on Hand</h2>

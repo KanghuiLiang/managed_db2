@@ -11,7 +11,7 @@ include('../connection.php');
 </head>
 <div class="row">
       <div class="col-md-1"></div>
-      <div class="col-md-7"><h2>Track</h2></div>
+      <div class="col-md-7"><h2>Search result</h2></div>
   <div class="col-md-3">
 <h2> <button><a href="../pages/index.php">Back to Home</a></button></h2>
 </div>
@@ -22,32 +22,29 @@ include('../connection.php');
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>Tracking ID</th>
-        <th>Date Recieve from Customer</th>
-        <th>Date Arrived Company</th>
-        <th>Send toFactory</th>
-        <th>Date Return To Department</th>
-        <th>Send Method</th>
-        <th>Person Sent</th>
+        <th>ITEM</th>
+        <th>DETAIL</th>
+        <th>Price</th>
+        <th>SIZE</th>
+        <th>Action</th>
       </tr>
       </thead>
 <?php
-$id = $_POST['id'];
+$id = $_POST['serachItem'];
 
-$sql = "SELECT * FROM tracking WHERE Tracking_ID = '$id'";
+$sql = "SELECT * FROM item where (itemCode like '%$id%' OR detail LIKE '%$id%' OR price LIKE '%$id%' OR size LIKE '%$id%')";
 
 $result = $conn->query($sql);
 
     if($result -> num_rows>0){
       while($row = $result -> fetch_assoc()){
         echo '<tr>';
-        echo '<td>'.$row['Tracking_ID'].'</td>';
-        echo '<td>'.$row['Date_Recieve_fromCustomer'].'</td>';
-        echo '<td>'.$row['Date_Arrived_Comp'].'</td>';
-        echo '<td>'.$row['Sendto_Factory'].'</td>';
-        echo '<td>'.$row['Date_ReturntTo_Dept'].'</td>';
-        echo '<td>'.$row['SendMethod'].'</td>';
-        echo '<td>'.$row['Person_Sent'].'</td>';
+        echo '<td>'.$row['itemCode'].'</td>';
+        echo '<td>'.$row['detail'].'</td>';
+        echo '<td>'.$row['price'].'</td>';
+        echo '<td>'.$row['size'].'</td>';
+        echo "<td><a style='color:white' href='edit_item.php?itemCode=".$row['itemCode']."'><button type='button' class='btn btn-success'>Update</a></button></td>";
+        echo "<td><a style='color:white' href='delete_item.php?itemCode=".$row['itemCode']."' onClick=\"return confirm('Are you sure you want to delete?')\"><button type='button' class='btn btn-danger'>Delete</a></button></td>";
         echo '</tr>';
       }
 
